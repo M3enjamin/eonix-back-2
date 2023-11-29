@@ -9,19 +9,19 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "personnes")
-public class Personne {
+@Table(name = "persons")
+public class Person {
 
     @Id
     private UUID id;
 
     @NotBlank
     @Column(nullable = false, length = 255)
-    private String Prenom;
-    
+    private String firstName;
+
     @NotBlank
     @Column(nullable = false, length = 255)
-    private String Nom;
+    private String lastName;
 
     public UUID getId() {
         return id;
@@ -31,20 +31,20 @@ public class Personne {
         this.id = id;
     }
 
-    public String getPrenom() {
-        return Prenom;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setPrenom(String prenom) {
-        Prenom = prenom;
+    public void setFirstName(String prenom) {
+        firstName = prenom;
     }
 
-    public String getNom() {
-        return Nom;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setNom(String nom) {
-        Nom = nom;
+    public void setLastName(String nom) {
+        lastName = nom;
     }
 
 }
